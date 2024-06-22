@@ -1,0 +1,179 @@
+<html>
+<head>
+  <title>Case Study | CamFind V.S. Google Lens</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/ml5@0.7.0/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <center>
+    <h1 id="title">Accuracy Case Study Between Google Lens and CamFind</h1>
+    <span id="comparison"><img id="lens" src="googlelens.png"><b>VS</b> <img id="mn" src="camfind.png">
+    <hr>
+    <ol><span>
+        <div class="test_image_and_result col-xs-12">
+            <li class="number col-sm-4 col-xs-12">
+                <br>
+                <b>Test Image -</b>
+                <img src="book.jpeg" class="img-responsive">
+            </li>
+            <br>
+            <h5 style = "color: green;" class="col-sm-4 col-xs-12"><b>GOOGLE LENS OUTPUT</b> - Book <span></span></h5>
+            <h5  style = "color: green;"class="col-sm-4 col-xs-12"><b>CAMFIND OUTPUT</b> - Book <span></span></h5>
+            <br><br><hr>
+            <div class="mini_results" class="col-xs-12">
+                <h4 class="results">Result - TIE </h4>
+            </div>
+            </div>
+            <div class="test_image_and_result col-xs-12">
+                <span><li class="number col-sm-4 col-xs-12">
+                    <br>
+                    <b>Test Image -</b>
+                    <img src="boxing_glove.jpeg" class="img-responsive">
+                </li>
+                <br>
+                <h5 class="col-sm-4 col-xs-12" style = "color: green"><b>GOOGLE LENS OUTPUT</b> - Boxing Glove <span></span></h5>
+                <h5 class="col-sm-4 col-xs-12"style = "color: green"><b>CAMFIND OUTPUT</b> - Boxing Glove <span></span></h5>
+                <br><br><br><hr>
+                <div class="mini_results" class="col-xs-12">
+                    <h4 class="results">Result - TIE</h4>
+                </div></span>
+                
+    </ol><ol>
+    <span><li></li><li></li>
+        <div class="test_image_and_result col-xs-12">
+            <li class="number col-sm-4 col-xs-12">
+                <br>
+                <b>Test Image -</b>
+                <img src="comb.jpeg" class="img-responsive">
+            </li>
+            <br>
+            <h5 class="col-sm-4 col-xs-12" style = "color: green"><b>GOOGLE LENS OUTPUT</b> - Hair Comb <span></span></h5>
+            <h5 class="col-sm-4 col-xs-12" style = "color: red"><b>CAMFIND OUTPUT</b> - Plastic Bottle <span></span></h5>
+            <br><br><hr>
+            <div class="mini_results" class="col-xs-12">
+                <h4 class="results">Result - GOOGLE LENS</h4>
+               
+            </div>
+            </div>
+            <div class="test_image_and_result col-xs-12">
+                <span><li class="number col-sm-4 col-xs-12">
+                    <br>
+                    <b>Test Image -</b>
+                    <img src="dumbbells.jpeg" class="img-responsive">
+                </li>
+                <br>
+                <h5 class="col-sm-4 col-xs-12" style = "color: green"><b>GOOGLE LENS OUTPUT</b> - Dumbbell <span></span></h5>
+                <h5 class="col-sm-4 col-xs-12"style = "color: green"><b>CAMFIND OUTPUT</b> - Dumbbell <span></span></h5>
+                <br><br><hr>
+                <div class="mini_results" class="col-xs-12">
+                    <h4 class="results">Result - TIE</h4>
+                    
+                </div></span></ol>
+                <ol>
+    <span><li></li><li></li><li><li></li>
+        <div class="test_image_and_result col-xs-12">
+            <li class="number col-sm-4 col-xs-12">
+                <br>
+                <b>Test Image -</b>
+                <img src="fidgetspinner.jpeg" class="img-responsive">
+            </li>
+            <br>
+            <h5 class="col-sm-4 col-xs-12" style = "color: green"><b>GOOGLE LENS OUTPUT</b> - Fidget Spinner <span></span></h5>
+            <h5 class="col-sm-4 col-xs-12"style = "color: green"><b>CAMFIND OUTPUT</b> - Fidget Spinner <span></span></h5>
+            <br><br><br><hr>
+            <div class="mini_results" class="col-xs-12">
+                <h4 class="results">Result - TIE </h4>
+                
+            </div>
+            </div>
+            <div class="test_image_and_result col-xs-12">
+                <span><li class="number col-sm-4 col-xs-12">
+                    <br>
+                    <b>Test Image -</b>
+                    <img src="lipbalm.jpeg" class="img-responsive">
+                </li>
+                <br>
+                <h5 class="col-sm-4 col-xs-12" style = "color: green"><b>GOOGLE LENS OUTPUT</b> - Chapstick Lip Balm<span></span></h5>
+                <h5 class="col-sm-4 col-xs-12" style = "color: red"><b>CAMFIND OUTPUT</b> - Labeled Bottle <span></span></h5>
+                <br><br><br><hr>
+                <div class="mini_results" class="col-xs-12">
+                    <h4 class="results">Result - GOOGLE LENS</h4>
+                    
+                </div></span></ol>
+                <ol>
+                    <span><li></li><li></li><li><li></li><li><li></li>>
+                        <div class="test_image_and_result col-xs-12">
+                            <li class="number col-sm-4 col-xs-12">
+                                <br>
+                                <b>Test Image -</b>
+                                <img src="phone.jpeg" class="img-responsive">
+                            </li>
+                            <br>
+                            <h5 class="col-sm-4 col-xs-12" style = "color: green"><b>GOOGLE LENS OUTPUT</b> - IPhone <span></span></h5>
+                            <h5 class="col-sm-4 col-xs-12" style = "color: red"><b>CAMFIND OUTPUT</b> - Phone Case <span></span></h5>
+                            <br><br><hr>
+                            <div class="mini_results" class="col-xs-12">
+                                <h4 class="results">Result - GOOGLE LENS </h4>
+                               
+                            </div>
+                            </div>
+                            <div class="test_image_and_result col-xs-12">
+                                <span><li class="number col-sm-4 col-xs-12">
+                                    <br>
+                                    <b>Test Image -</b>
+                                    <img src="scissors.jpeg" class="img-responsive">
+                                </li>
+                                <br>
+                                <h5 class="col-sm-4 col-xs-12" style = "color: green"><b>GOOGLE LENS OUTPUT</b> - Scissors <span></span></h5>
+                                <h5 class="col-sm-4 col-xs-12" style = "color: red"><b>CAMFIND OUTPUT</b> - Metal Tool <span></span></h5>
+                                <br><br><hr>
+                                <div class="mini_results" class="col-xs-12">
+                                    <h4 class="results">Result - GOOGLE LENS </h4>
+                                    
+                                </div></span></ol>
+                                <ol>
+                                    <span><li></li><li></li><li><li><li><li><li><li></li>
+                                        <div class="test_image_and_result col-xs-12">
+                                            <li class="number col-sm-4 col-xs-12">
+                                                <br>
+                                                <b>Test Image -</b>
+                                                <img src="tabletennisracket.jpeg" class="img-responsive">
+                                            </li>
+                                            <br>
+                                            <h5 class="col-sm-4 col-xs-12" style = "color: green"><b>GOOGLE LENS OUTPUT</b> - Table Tennis Racket <span></span></h5>
+                                            <h5 class="col-sm-4 col-xs-12" style = "color: green"><b>CAMFIND OUTPUT</b> - Table Tennis Racket<span></span></h5>
+                                            <br><br><br><br><hr>
+                                            <div class="mini_results" class="col-xs-12">
+                                                <h4 class="results">Result - TIE </h4>
+                                                
+                                            </div>
+                                            </div>
+                                            <div class="test_image_and_result col-xs-12">
+                                                <span><li class="number2 col-sm-4 col-xs-12">
+                                                    <br>
+                                                    <b>Test Image -</b>
+                                                    <img src="ukelele.jpg" class="img-responsive">
+                                                </li>
+                                                <br>
+                                                <h5 class="col-sm-4 col-xs-12" style = "color: green"><b>GOOGLE LENS OUTPUT</b> - Ukelele<span></span></h5>
+                                                <h5 class="col-sm-4 col-xs-12" style = "color: red"><b>CAMFIND OUTPUT</b> - Acoustic Guitar <span></span></h5>
+                                                <br><br><hr>
+                                                <div class="mini_results" class="col-xs-12">
+                                                    <h4 class="results">Result - GOOGLE LENS </h4>
+                                
+                                                </div></span></ol>
+        <div class="result col-lg-6" style = "color: green">According to this experiment, the more accurate one is -<hr> <label>GOOGLE LENS!</label></div>                                        
+        <div class="copy_right_footer">
+            Developed By - Kanav Sah
+          </div>
+         </center>
+        </body>
+        </html>
